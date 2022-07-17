@@ -11,7 +11,7 @@ const __dirname = dirname(fileURLToPath(
 
 
 let app = express()
-const port  = process.env.PORT || 3000
+const port  = Process.env.PORT || 3000
 
 
 
