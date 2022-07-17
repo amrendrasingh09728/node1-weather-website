@@ -1,8 +1,3 @@
-
-console.log("loading js file in browser !")
-
-
-
 const formSubmit = document.querySelector('form')
 const search =  document.querySelector('input')
 const address = document.getElementById('location')

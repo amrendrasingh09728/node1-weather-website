@@ -11,7 +11,7 @@ const __dirname = dirname(fileURLToPath(
 
 
 let app = express()
-const port  = Process.env.PORT || 3000
+const port  = process.env.PORT || 3000
 
 
 
@@ -38,8 +38,10 @@ app.use(express.static(directory))
 
 app.get('/weather', (req,res)=>{
     if(!req.query.address){
+        console.log(res)
         return res.send({
             error : 'Not able to find address'
+            
         })
         
     }
@@ -138,5 +140,5 @@ app.get('*', (req,res)=>{
 
 
 app.listen(port,()=>{
-    console.log("server is on up"+ port)
+    console.log("server is on up")
 })

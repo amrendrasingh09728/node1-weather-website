@@ -2,13 +2,12 @@
 import request from 'postman-request'
 
 export const forecast = (a ,b ,c , callback) => {
-    const url = "http://api.weatherstack.com/current?access_key=7e327ffa85d5e1be95eaf2e47c360ed3&query="+ a + "," + b
-     console.log(url)
+    const url = "http://api.weatherstack.com/current?access_key=132b28169a7bce1cb0759563939931d3&query="+ a + "," + b
     request({url, json :'json'},(error,response) => {
         if(error){
             callback("Can't connect to the weatherStack", undefined)
         }else if(response.body.success===false){
-            callback("Unable to find location", undefined)
+            callback("Unable to find locationnnnn", undefined)
 
         }else{
             const data = {
