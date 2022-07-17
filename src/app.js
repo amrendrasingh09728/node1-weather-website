@@ -11,6 +11,7 @@ const __dirname = dirname(fileURLToPath(
 
 
 let app = express()
+const port  = process.env.PORT || 3000
 
 
 
@@ -136,6 +137,6 @@ app.get('*', (req,res)=>{
 
 
 
-app.listen(3000,()=>{
-    console.log("server is on up 3000")
+app.listen(port,()=>{
+    console.log("server is on up"+ port)
 })
